@@ -197,7 +197,7 @@ function initRoiCalculator() {
    4. Calendly & Pilot Form Integration (Replicating GoldenKall credentials)
    -------------------------------------------------------------------------- */
 const CALENDLY_URL = 'https://calendly.com/narayanans-knoxcalls/30min';
-const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'; // Replace this with the key sent to info@jobqual.com
+const WEB3FORMS_ACCESS_KEY = '49821d2f-b6a7-4139-90bc-2e6bd8866e1a';
 const BRAND_COLORS = {
     background: '080b11', // Obsidian background
     text: 'ffffff',       // White text
