@@ -197,7 +197,6 @@ function initRoiCalculator() {
    4. Calendly & Pilot Form Integration (Replicating GoldenKall credentials)
    -------------------------------------------------------------------------- */
 const CALENDLY_URL = 'https://calendly.com/narayanans-knoxcalls/30min';
-const WEB3FORMS_ACCESS_KEY = 'c51d439e-5ae0-4645-afeb-a93d279770d6';
 const BRAND_COLORS = {
     background: '080b11', // Obsidian background
     text: 'ffffff',       // White text
@@ -252,12 +251,12 @@ function initPilotForm() {
         }
 
         try {
-            // Replicate Web3Forms data structure used in GoldenKall
-            formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+            // Append subject and from_name metadata parameters
             formData.append('subject', `New Pilot Access Request: ${company}`);
             formData.append('from_name', 'JobQual Landing Page');
 
-            const response = await fetch('https://api.web3forms.com/submit', {
+            // Send to Cloudflare Pages serverless Function handler securely
+            const response = await fetch('/functions/submit', {
                 method: 'POST',
                 body: formData
             });
