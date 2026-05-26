@@ -199,9 +199,9 @@ function initRoiCalculator() {
 const CALENDLY_URL = 'https://calendly.com/narayanans-knoxcalls/30min';
 const WEB3FORMS_ACCESS_KEY = '49821d2f-b6a7-4139-90bc-2e6bd8866e1a';
 const BRAND_COLORS = {
-    background: '080b11', // Obsidian background
+    background: '0b0e08', // Sage obsidian background
     text: 'ffffff',       // White text
-    primary: '6366f1'     // Indigo primary
+    primary: 'ff8200'     // Vols Orange primary
 };
 
 function openCalendly(prefill = {}) {

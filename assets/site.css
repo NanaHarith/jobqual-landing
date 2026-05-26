@@ -1,33 +1,33 @@
 /* ==========================================================================
    JOBQUAL DESIGN SYSTEM & CORE STYLESHEET
-   Aesthetics: Deep Obsidian, Cyber Purple/Indigo & Neon Teal Accents
+   Aesthetics: Modern Olive Green, Vols Orange & warm Gold Accents
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap');
 
 :root {
     /* Color Palette */
-    --bg-obsidian: #080b11;
-    --bg-obsidian-alt: #0e131f;
-    --bg-card: rgba(17, 24, 39, 0.7);
-    --bg-glass: rgba(15, 23, 42, 0.4);
+    --bg-obsidian: #0b0e08;
+    --bg-obsidian-alt: #11160c;
+    --bg-card: rgba(20, 27, 16, 0.7);
+    --bg-glass: rgba(17, 24, 14, 0.4);
     
-    --accent-indigo: #6366f1;
-    --accent-violet: #8b5cf6;
-    --accent-teal: #06b6d4;
-    --accent-pink: #ec4899;
+    --accent-indigo: #84a944;   /* Olive Green as primary */
+    --accent-violet: #ff8200;   /* Vols Orange as secondary */
+    --accent-teal: #f59e0b;     /* warm Gold as tertiary */
+    --accent-pink: #ef4444;     /* Red/Crimson alert */
     
-    --accent-indigo-glow: rgba(99, 102, 241, 0.15);
-    --accent-violet-glow: rgba(168, 85, 247, 0.15);
-    --accent-teal-glow: rgba(6, 182, 212, 0.15);
+    --accent-indigo-glow: rgba(132, 169, 68, 0.15);
+    --accent-violet-glow: rgba(255, 130, 0, 0.15);
+    --accent-teal-glow: rgba(245, 158, 11, 0.15);
     
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
+    --text-primary: #f5f7f4;    /* sage-tinted off-white */
+    --text-secondary: #a2b09c;  /* sage gray */
+    --text-muted: #6b7a66;      /* muted sage */
     
-    --border-glass: rgba(255, 255, 255, 0.08);
-    --border-glow: rgba(139, 92, 246, 0.2);
-    --border-glow-hover: rgba(6, 182, 212, 0.4);
+    --border-glass: rgba(255, 255, 255, 0.06);
+    --border-glow: rgba(132, 169, 68, 0.25);
+    --border-glow-hover: rgba(255, 130, 0, 0.4);
     
     /* Fonts */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -58,8 +58,8 @@ html {
 body {
     overflow-x: hidden;
     position: relative;
-    background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 40%);
+    background: radial-gradient(circle at 10% 20%, rgba(132, 169, 68, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 130, 0, 0.05) 0%, transparent 40%);
 }
 
 .container {
@@ -131,7 +131,7 @@ nav {
     left: 0;
     width: 100%;
     height: var(--nav-height);
-    background: rgba(8, 11, 17, 0.7);
+    background: rgba(11, 14, 8, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-glass);
@@ -141,7 +141,7 @@ nav {
 
 nav.scrolled {
     height: 70px;
-    background: rgba(8, 11, 17, 0.9);
+    background: rgba(11, 14, 8, 0.9);
 }
 
 .nav-content {
@@ -164,13 +164,14 @@ nav.scrolled {
 .logo-icon {
     width: 36px;
     height: 36px;
-    background: linear-gradient(135deg, var(--accent-indigo) 0%, var(--accent-violet) 100%);
+    background: url('/assets/favicon.png') no-repeat center center;
+    background-size: cover;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    color: white;
+    color: transparent;
     box-shadow: 0 0 15px var(--accent-indigo-glow);
 }
 
@@ -1032,7 +1033,7 @@ nav.scrolled {
 .site-footer {
     border-top: 1px solid var(--border-glass);
     padding: 60px 0;
-    background: #06080c;
+    background: #080b06;
 }
 
 .footer-grid {
