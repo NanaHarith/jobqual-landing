@@ -290,3 +290,26 @@ function initPilotForm() {
         }
     });
 }
+
+// 5. Calendly Event Booking Complete Handler
+window.addEventListener('message', (e) => {
+    if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+        const form = document.getElementById('pilot-program-form');
+        if (form) {
+            const fieldsWrapper = form.querySelector('.form-fields-wrapper');
+            const successMessage = form.querySelector('.form-success-message');
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            if (fieldsWrapper) fieldsWrapper.style.display = 'block';
+            if (successMessage) successMessage.style.display = 'none';
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Application';
+            }
+            form.reset();
+        }
+        
+        // Take the user back to the home page
+        window.location.href = '/';
+    }
+});
