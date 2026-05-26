@@ -194,41 +194,98 @@ function initRoiCalculator() {
 }
 
 /* --------------------------------------------------------------------------
-   4. Interactive Pilot Request Form
+   4. Calendly & Pilot Form Integration (Replicating GoldenKall credentials)
    -------------------------------------------------------------------------- */
+const CALENDLY_URL = 'https://calendly.com/narayanans-knoxcalls/30min';
+const WEB3FORMS_ACCESS_KEY = 'c51d439e-5ae0-4645-afeb-a93d279770d6';
+const BRAND_COLORS = {
+    background: '080b11', // Obsidian background
+    text: 'ffffff',       // White text
+    primary: '6366f1'     // Indigo primary
+};
+
+function openCalendly(prefill = {}) {
+    let url = `${CALENDLY_URL}?hide_landing_page_details=1&hide_gdpr_banner=1`;
+    url += `&background_color=${BRAND_COLORS.background}`;
+    url += `&text_color=${BRAND_COLORS.text}`;
+    url += `&primary_color=${BRAND_COLORS.primary}`;
+    
+    if (prefill.name) url += `&name=${encodeURIComponent(prefill.name)}`;
+    if (prefill.email) url += `&email=${encodeURIComponent(prefill.email)}`;
+    
+    if (window.Calendly) {
+        window.Calendly.initPopupWidget({ url });
+    } else {
+        window.open(url, '_blank');
+    }
+}
+
 function initPilotForm() {
+    // 1. Direct Demo Booking Button Handler
+    const bookDemoBtn = document.getElementById('book-demo-btn');
+    if (bookDemoBtn) {
+        bookDemoBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openCalendly();
+        });
+    }
+
+    // 2. Pilot Form Submission Handler
     const form = document.getElementById('pilot-program-form');
     if (!form) return;
 
-    form.addEventListener('submit', (e) => {
+    const fieldsWrapper = form.querySelector('.form-fields-wrapper');
+    const successMessage = form.querySelector('.form-success-message');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Simple client-side verification
-        const name = document.getElementById('pilot-name').value.trim();
-        const email = document.getElementById('pilot-email').value.trim();
-        const company = document.getElementById('pilot-company').value.trim();
+        const formData = new FormData(form);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const company = formData.get('company');
 
-        if (!name || !email || !company) {
-            alert('Please fill out all required fields.');
-            return;
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending Application...';
         }
 
-        // Animate form container to success state
-        const container = form.parentElement;
-        container.style.opacity = '0';
-        container.style.transform = 'translateY(15px)';
-        
-        setTimeout(() => {
-            container.innerHTML = `
-                <div class="glass-panel" style="text-align: center; border-color: var(--accent-teal); padding: 48px;">
-                    <div class="logo-icon" style="margin: 0 auto 24px auto; width: 64px; height: 64px; font-size: 28px;">✓</div>
-                    <h3 class="highlight" style="font-size: 28px; margin-bottom: 16px;">Welcome to the Queue</h3>
-                    <p style="margin-bottom: 24px;">Thank you for applying to the JobQual outbound screening pilot program. Our team will verify your ATS compatibility and email booking hooks, and reach out to you within 24 hours.</p>
-                    <a href="/" class="btn btn-primary">Back to Home</a>
-                </div>
-            `;
-            container.style.opacity = '1';
-            container.style.transform = 'translateY(0)';
-        }, 400);
+        try {
+            // Replicate Web3Forms data structure used in GoldenKall
+            formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+            formData.append('subject', `New Pilot Access Request: ${company}`);
+            formData.append('from_name', 'JobQual Landing Page');
+
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                // Show success container & hide form fields
+                if (fieldsWrapper) fieldsWrapper.style.display = 'none';
+                if (successMessage) successMessage.style.display = 'block';
+
+                // Automatically trigger Calendly after a brief delay
+                setTimeout(() => {
+                    openCalendly({ name, email });
+                }, 1500);
+
+                // Reset form fields
+                form.reset();
+            } else {
+                throw new Error(result.message || 'Submission failed');
+            }
+        } catch (error) {
+            console.error('Submission Error:', error);
+            alert('Something went wrong. Please try again or reach out at info@jobqual.ai');
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Application';
+            }
+        }
     });
 }
