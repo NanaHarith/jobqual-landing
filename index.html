@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobQual | Outbound AI Phone Screening & Candidate Vetting Software</title>
+    <meta name="description" content="Automate candidate outreach and qualification. JobQual initiates TCPA-compliant outbound voice screening calls, scores candidates against custom playbooks, and books interviews.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jobqual.ai/">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="container nav-content">
+        <a href="/" class="nav-logo">
+            <div class="logo-icon">JQ</div>
+            <div class="logo-text">Job<span>Qual</span></div>
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="nav-links">
+            <a href="/" class="nav-link active">Home</a>
+            <a href="/pricing.html" class="nav-link">Pricing</a>
+            <div class="nav-dropdown">
+                <span class="nav-link dropdown-trigger">Who We Serve</span>
+                <div class="dropdown-content">
+                    <a href="/blog/the-roi-of-automated-phone-screening-for-recruiting-agencies.html">Recruiting Agencies</a>
+                    <a href="/compare/jobqual-vs-hirefirst.html">Corporate Talent Acquisition</a>
+                    <a href="/compare/jobqual-vs-gem.html">High-Growth Startups</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <span class="nav-link dropdown-trigger">Resources</span>
+                <div class="dropdown-content">
+                    <a href="/blog/">Blog & Guides</a>
+                    <a href="/glossary/">Glossary</a>
+                    <a href="/compare/">Compare Tools</a>
+                </div>
+            </div>
+            <a href="#pilot-cta" class="nav-cta">Apply for Pilot</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="page-hero">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; text-align: left; padding-top: 40px;">
+        <div>
+            <div class="section-tag">AI Recruiting Agent</div>
+            <h1>Qualify Candidates on Autopilot with <span class="highlight">Outbound AI Screening</span></h1>
+            <p class="lede" style="margin-top: 16px;">Stop chasing candidate replies. JobQual automatically initiates telephone screening calls, vets candidates against custom playbooks, and schedules top-tier talent directly onto your calendar.</p>
+            <div style="display: flex; gap: 16px;">
+                <a href="#pilot-cta" class="btn btn-primary">Start Pilot Program</a>
+                <a href="/compare/" class="btn btn-secondary">Compare Capabilities</a>
+            </div>
+        </div>
+        
+        <!-- Interactive Call Simulator Widget -->
+        <div class="glass-panel" id="call-simulator-widget" style="padding: 24px;">
+            <div class="simulator-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <div class="logo-icon" style="width: 24px; height: 24px; font-size: 11px;">JQ</div>
+                    <span style="font-weight: 600; font-size: 14px;">Outbound Vetting Demo</span>
+                </div>
+                <div class="sim-status">
+                    <div class="status-dot"></div>
+                    <span class="status-text">Ready to Call</span>
+                </div>
+            </div>
+            
+            <div class="sim-body">
+                <!-- Interactive voice waves -->
+                <div class="voice-wave">
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                </div>
+                
+                <!-- Scrollable Dialogue area -->
+                <div class="sim-dialogue-box" style="height: 140px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 12px;">
+                    <p style="font-size: 13px; color: var(--text-muted); text-align: center; margin-top: 20px;">Click the button below to simulate a live outbound screening call.</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <button class="btn btn-primary" id="start-sim-btn" style="padding: 10px 20px; font-size: 14px;">Simulate Outbound Call</button>
+                </div>
+            </div>
+            
+            <!-- Recruiter Scorecard Preview (Renders upon completion) -->
+            <div class="sim-scorecard-preview">
+                <div class="scorecard-header">
+                    <div>
+                        <div style="font-size: 12px; color: var(--text-muted);">Fitment Score</div>
+                        <div class="fitment-score">94 / 100</div>
+                    </div>
+                    <span class="recruiter-pill pill-qualified">Vetted & Qualified</span>
+                </div>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 0;"><strong>Score Breakdown:</strong> Go distributed experience (Pass), Location Austin hybrid (Pass). 92% semantic overlap. SMS calendar link sent.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- USP Outbound Call Screening Highlight -->
+<section class="section alt">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">Core USP</div>
+            <h2>Why Outbound Call Screening beats standard filters</h2>
+            <p class="lede">Traditional filters wait for candidates to fill out assessments or chat with an SMS bot. JobQual takes proactive action to qualify top candidates fast.</p>
+        </div>
+        
+        <div class="grid-3">
+            <div class="glass-panel feature-card">
+                <div class="feature-icon" style="font-size: 14px; font-weight: 700;">CALL</div>
+                <h3>Active Phone Outreach</h3>
+                <p style="margin-top: 12px;">JobQual initiates calls to candidates automatically, executing custom role playbooks with natural, conversational voice AI. Stop waiting on passive text replies.</p>
+            </div>
+            <div class="glass-panel feature-card">
+                <div class="feature-icon" style="font-size: 14px; font-weight: 700;">SAFE</div>
+                <h3>TCPA & DNC Safe</h3>
+                <p style="margin-top: 12px;">Calling window validation ensures candidate-local timezone calls only run between 8 AM and 9 PM (via ZIP code lookup) and checks compliance against DNC registries.</p>
+            </div>
+            <div class="glass-panel feature-card">
+                <div class="feature-icon" style="font-size: 14px; font-weight: 700;">BOOK</div>
+                <h3>Autobooking Calendars</h3>
+                <p style="margin-top: 12px;">Immediately after a successful screen, JobQual texts/emails a Google Calendar or Microsoft Graph booking link to coordinate human recruiter interviews.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Grid (Capabilities) -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">Platform Architecture</div>
+            <h2>Built for enterprise-grade screening</h2>
+            <p class="lede">JobQual incorporates advanced semantic models and system safeguards to run robust automated screening loops.</p>
+        </div>
+        
+        <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="glass-panel feature-card">
+                <div class="feature-icon" style="font-size: 14px; font-weight: 700;">DOC</div>
+                <h3>Messy JD Ingestion</h3>
+                <p style="margin-top: 12px;">Upload unstructured JDs (PDF, DOCX, txt) to generate a custom playbook: custom screening questions, knockout triggers, scoring rubrics, and seniority ladders.</p>
+            </div>
+            
+            <div class="glass-panel feature-card">
+                <div class="feature-icon" style="font-size: 14px; font-weight: 700;">MATCH</div>
+                <h3>Blended Semantic Score</h3>
+                <p style="margin-top: 12px;">Candidate-to-job matching using a 70% whole-resume semantic score, 25% section-best score, 5% location bonus (Haversine geocoding), and career stability signals.</p>
+            </div>
+            
+            <div class="glass-panel feature-card">
+                <div class="feature-icon" style="font-size: 14px; font-weight: 700;">SYNC</div>
+                <h3>ATS Integrations</h3>
+                <p style="margin-top: 12px;">Native Greenhouse integrations and custom webhooks. When a phone screen concludes, JobQual automatically pushes scorecards, transcripts, and voice records.</p>
+            </div>
+            
+            <div class="glass-panel feature-card">
+                <div class="feature-icon" style="font-size: 14px; font-weight: 700;">MERGE</div>
+                <h3>Candidate Merge Queue</h3>
+                <p style="margin-top: 12px;">Recruiter reconciliation dashboard handles overlapping candidate records by matching emails/phones and merging duplicate applications into a single timeline.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recruiter Interface Preview Section -->
+<section class="section alt">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">Recruiter Interface</div>
+            <h2>Full transcript and scorecard transparency</h2>
+            <p class="lede">Every candidate gets a comprehensive record. Recruiter teams see exactly why the AI scored and qualified each applicant.</p>
+        </div>
+        
+        <div class="dashboard-preview">
+            <div class="dash-nav">
+                <div class="dash-title">
+                    <span class="logo-icon" style="width: 20px; height: 20px; font-size: 9px;">JQ</span>
+                    <span>JobQual Candidate Portal</span>
+                </div>
+                <div style="font-size: 13px; color: var(--text-secondary);">Senior Backend Engineer Requisition</div>
+            </div>
+            <div class="dash-grid">
+                <!-- Sidebar -->
+                <div class="dash-sidebar">
+                    <div class="candidate-item active">
+                        <div style="font-weight: 600;">Alex Mercer</div>
+                        <div class="candidate-meta">
+                            <span style="font-size: 12px; color: var(--text-muted);">Austin, TX</span>
+                            <span style="font-size: 12px; color: #10b981; font-weight: 600;">94% Match</span>
+                        </div>
+                    </div>
+                    <div class="candidate-item">
+                        <div style="font-weight: 600;">Sarah Chen</div>
+                        <div class="candidate-meta">
+                            <span style="font-size: 12px; color: var(--text-muted);">Seattle, WA</span>
+                            <span style="font-size: 12px; color: #f59e0b; font-weight: 600;">81% Match</span>
+                        </div>
+                    </div>
+                    <div class="candidate-item">
+                        <div style="font-weight: 600;">David Miller</div>
+                        <div class="candidate-meta">
+                            <span style="font-size: 12px; color: var(--text-muted);">Remote</span>
+                            <span style="font-size: 12px; color: var(--accent-pink); font-weight: 600;">38% Fail</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Dashboard area -->
+                <div class="dash-main">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px;">
+                        <div>
+                            <h3 style="font-size: 22px;">Alex Mercer</h3>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 0;">Screened on: May 26, 2026 at 9:42 AM local time</p>
+                        </div>
+                        <div class="score-badge">94%</div>
+                    </div>
+                    
+                    <h4 style="font-size: 14px; text-transform: uppercase; color: var(--accent-teal); margin-bottom: 12px;">Knockout Verification</h4>
+                    <div class="knockout-grid">
+                        <div class="knockout-card">
+                            <span class="knockout-pass">✓</span>
+                            <div>
+                                <div style="font-weight: 600; font-size: 13px;">Go & gRPC Experience</div>
+                                <span style="font-size: 11px; color: var(--text-muted);">Verified Go Microservices</span>
+                            </div>
+                        </div>
+                        <div class="knockout-card">
+                            <span class="knockout-pass">✓</span>
+                            <div>
+                                <div style="font-weight: 600; font-size: 13px;">Hybrid Austin, TX</div>
+                                <span style="font-size: 11px; color: var(--text-muted);">Verified local resident</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="font-size: 14px; text-transform: uppercase; color: var(--accent-teal); margin-bottom: 12px;">AI Call Transcript Snippet</h4>
+                    <div style="background: rgba(0,0,0,0.2); border-radius: 8px; padding: 16px; font-size: 14px; border: 1px solid var(--border-glass);">
+                        <p style="margin-bottom: 8px;"><strong>JobQual (AI):</strong> "Can you explain your experience with distributed key-value stores and replication models?"</p>
+                        <p style="margin-bottom: 0; color: var(--text-primary);"><strong>Alex Mercer:</strong> "Yes. In my last role at CloudScale, our entire microservices mesh was built in Go communicating over gRPC. I designed the session replication protocol using Raft..."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">FAQ</div>
+            <h2>Common Questions About JobQual</h2>
+            <p class="lede">Everything you need to know about our outbound voice vetting, TCPA compliance, and scheduling systems.</p>
+        </div>
+        
+        <div class="faq-list">
+            <details>
+                <summary>How does the Outbound Call Screener work?</summary>
+                <p>When a candidate submits their resume (or is imported into JobQual), the system calculates their initial semantic score. If they meet the target threshold, JobQual initiates an outbound call to qualify them. It verifies critical requirements (knockouts), asks role-specific technical questions, and scores their answers dynamically against your playbook rubric.</p>
+            </details>
+            <details>
+                <summary>Is the outbound calling engine TCPA compliant?</summary>
+                <p>Yes. JobQual integrates strict calling windows. It geocodes the candidate's phone number and ZIP code to determine their local time and only places calls between 8 AM and 9 PM candidate-local time. Additionally, we reconcile numbers against DNC block-lists before executing any outbound campaigns.</p>
+            </details>
+            <details>
+                <summary>What is Blended Semantic Matching?</summary>
+                <p>JobQual uses a multi-faceted matching algorithm to evaluate profiles: 70% is derived from a semantic context match of the whole resume against the JD, 25% looks at the "section-best" match to find hidden gems, and 5% acts as a geocoded location bonus based on Haversine distance. We also factor in career stability signals like average tenure and relocation history.</p>
+            </details>
+            <details>
+                <summary>How does it integrate with our ATS?</summary>
+                <p>We offer native integrations with Greenhouse and support custom webhooks. When a phone screen is completed, JobQual automatically pushes the structured rubric scorecard, the audio recording, and a complete text transcript directly into the candidate's ATS record.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Pilot Application CTA Section -->
+<section class="section alt" id="pilot-cta">
+    <div class="container">
+        <div class="cta-box">
+            <div class="section-tag">Pilot Program</div>
+            <h2>Qualify candidates without picking up the phone</h2>
+            <p class="lede" style="margin: 0 auto 40px auto;">We are accepting limited partner companies into our early pilot program. Secure your spot to start automated voice candidate screens.</p>
+            
+            <!-- Pilot Form -->
+            <div class="glass-panel" style="max-width: 600px; margin: 0 auto;">
+                <form id="pilot-program-form" class="pilot-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="pilot-name">Full Name *</label>
+                            <input class="form-input" type="text" id="pilot-name" required placeholder="Nana Satyamurthy">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="pilot-email">Work Email *</label>
+                            <input class="form-input" type="email" id="pilot-email" required placeholder="nana@example.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="pilot-company">Company Name *</label>
+                            <input class="form-input" type="text" id="pilot-company" required placeholder="Acme Recruiting">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="pilot-ats">Applicant Tracking System (ATS)</label>
+                            <input class="form-input" type="text" id="pilot-ats" placeholder="Greenhouse, Lever, Workday...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Estimated Monthly Sourcing Volume</label>
+                        <div class="form-checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="radio" name="pilot-volume" value="lt100" checked>
+                                Under 100 candidates / month
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" name="pilot-volume" value="100-500">
+                                100 - 500 candidates / month
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" name="pilot-volume" value="gt500">
+                                Over 500 candidates / month
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit" style="width: 100%; margin-top: 12px;">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-logo-area">
+                <a href="/" class="nav-logo">
+                    <div class="logo-icon">JQ</div>
+                    <div class="logo-text" style="color: var(--text-primary);">Job<span>Qual</span></div>
+                </a>
+                <p class="footer-desc">Next-generation outbound AI voice screening and candidate matching software. Automating the top of your recruiting funnel safely.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="/pricing.html">Pricing Plans</a></li>
+                    <li><a href="/compare/jobqual-vs-hirefirst.html">VS HireFirst</a></li>
+                    <li><a href="/compare/jobqual-vs-paradox.html">VS Paradox</a></li>
+                    <li><a href="/compare/jobqual-vs-gem.html">VS Gem</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/blog/">Recruitment Blog</a></li>
+                    <li><a href="/glossary/">Glossary of Terms</a></li>
+                    <li><a href="/compare/">All Tool Comparisons</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                    <li><a href="mailto:info@jobqual.ai">Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JobQual Technologies, Inc. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "SoftwareApplication",
+            "@id": "https://jobqual.ai/#application",
+            "name": "JobQual",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "All",
+            "url": "https://jobqual.ai/",
+            "description": "Automate candidate outreach and qualification. JobQual initiates TCPA-compliant outbound voice screening calls, scores candidates against custom playbooks, and books interviews.",
+            "offers": {
+                "@type": "Offer",
+                "price": "249.00",
+                "priceCurrency": "USD",
+                "category": "Subscription"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://jobqual.ai/#organization",
+            "name": "JobQual Technologies, Inc.",
+            "url": "https://jobqual.ai/",
+            "founder": {
+                "@type": "Person",
+                "name": "Nana Satyamurthy"
+            }
+        }
+    ]
+}
+</script>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>

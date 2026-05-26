@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Outbound Call Screening? | AI Recruitment Glossary</title>
+    <meta name="description" content="Definition of Outbound Call Screening. Learn how automated voice agents place qualification calls, check knockout criteria, and score candidate fitment.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jobqual.ai/glossary/outbound-call-screening.html">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<nav>
+    <div class="container nav-content">
+        <a href="/" class="nav-logo">
+            <div class="logo-icon">JQ</div>
+            <div class="logo-text">Job<span>Qual</span></div>
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/pricing.html" class="nav-link">Pricing</a>
+            <div class="nav-dropdown">
+                <span class="nav-link dropdown-trigger">Who We Serve</span>
+                <div class="dropdown-content">
+                    <a href="/blog/the-roi-of-automated-phone-screening-for-recruiting-agencies.html">Recruiting Agencies</a>
+                    <a href="/compare/jobqual-vs-hirefirst.html">Corporate Talent Acquisition</a>
+                    <a href="/compare/jobqual-vs-gem.html">High-Growth Startups</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <span class="nav-link active dropdown-trigger">Resources</span>
+                <div class="dropdown-content">
+                    <a href="/blog/">Blog & Guides</a>
+                    <a href="/glossary/">Glossary</a>
+                    <a href="/compare/">Compare Tools</a>
+                </div>
+            </div>
+            <a href="/#pilot-cta" class="nav-cta">Apply for Pilot</a>
+        </div>
+    </div>
+</nav>
+
+<header class="page-hero">
+    <div class="container">
+        <div class="section-tag">Glossary Entry</div>
+        <h1>Outbound Call Screening</h1>
+        <p class="lede">Definition: Automated candidate qualification and vetting initiated via voice telephone calls.</p>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container" style="max-width: 800px;">
+        
+        <div class="tldr">
+            <strong>Outbound Call Screening</strong> is the process where a software agent initiates phone calls to candidates in a recruitment pipeline to qualify their experience levels, check knockout requirements, score technical capabilities, and prompt calendar scheduling. It differs from inbound calling (waiting for candidate call-backs) by proactively moving applicants through the vetting gate.
+        </div>
+
+        <h2>How it works</h2>
+        <p>The outbound screening loop begins immediately after a candidate application is ingested or parsed. The workflow executes as follows:</p>
+        <ol style="margin-left: 20px; margin-bottom: 24px; color: var(--text-secondary);">
+            <li style="margin-bottom: 8px;"><strong>Trigger:</strong> A recruiter uploads a batch of resumes, or an API sync pulls new applications from Greenhouse.</li>
+            <li style="margin-bottom: 8px;"><strong>Compliance check:</strong> The dialer geocodes the candidate's ZIP code to verify their local timezone, confirming the time falls in the TCPA window (8 AM to 9 PM).</li>
+            <li style="margin-bottom: 8px;"><strong>Initiate Call:</strong> The voice agent connects to the candidate. Using text-to-speech and dynamic reasoning models, it introduces the role and checks availability.</li>
+            <li style="margin-bottom: 8px;"><strong>Playbook Execution:</strong> The agent interviews the candidate based on custom playbook rubrics (checking experience level, availability, and knockout conditions).</li>
+            <li style="margin-bottom: 8px;"><strong>Grade & Route:</strong> The call transcript is scored. If the candidate passes the fitment gate, an automated SMS/email with a booking hook (Google Calendar) is dispatched to book a call with a recruiter.</li>
+        </ol>
+
+        <h2>Why it matters</h2>
+        <p>In traditional recruiting, screening candidate profiles is a major bottleneck. Recruiters waste 15-20 hours per week sending email sequences, coordinating times, and conducting initial phone screens. Standard chat bots have high candidate drop-offs, while manual outbound campaigns are slow and expensive. Outbound call screening automates top-funnel vetting, ensuring recruiters speak only to pre-qualified, interested candidates.</p>
+
+        <h2>How JobQual implements it</h2>
+        <p>JobQual runs high-volume concurrent calling workers that automatically dial candidates, running customized playbooks synthesized directly from JDs. Transcripts, audio files, and rubric-scored reports are synced to Greenhouse and other applicant tracking systems instantly.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-logo-area">
+                <a href="/" class="nav-logo">
+                    <div class="logo-icon">JQ</div>
+                    <div class="logo-text" style="color: var(--text-primary);">Job<span>Qual</span></div>
+                </a>
+                <p class="footer-desc">Next-generation outbound AI voice screening and candidate matching software. Automating the top of your recruiting funnel safely.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="/pricing.html">Pricing Plans</a></li>
+                    <li><a href="/compare/jobqual-vs-hirefirst.html">VS HireFirst</a></li>
+                    <li><a href="/compare/jobqual-vs-paradox.html">VS Paradox</a></li>
+                    <li><a href="/compare/jobqual-vs-gem.html">VS Gem</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/blog/">Recruitment Blog</a></li>
+                    <li><a href="/glossary/">Glossary of Terms</a></li>
+                    <li><a href="/compare/">All Tool Comparisons</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                    <li><a href="mailto:info@jobqual.ai">Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JobQual Technologies, Inc. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "@id": "https://jobqual.ai/glossary/outbound-call-screening.html",
+    "name": "Outbound Call Screening",
+    "description": "Automated candidate qualification and vetting initiated via voice telephone calls.",
+    "inDefinedTermSet": "https://jobqual.ai/glossary/#termset",
+    "url": "https://jobqual.ai/glossary/outbound-call-screening.html"
+}
+</script>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>
