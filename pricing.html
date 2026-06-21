@@ -1,426 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing Plans & ROI Calculator | JobQual AI Screening</title>
-    <meta name="description" content="Transparent, variable pricing models for JobQual. Toggle between campaign tiers or pay-as-you-go micro-transactions. Calculate your recruiting ROI.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://jobqual.ai/pricing.html">
-    <link rel="icon" type="image/png" href="/assets/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="/assets/site.css">
-    <!-- Calendly link widget begin -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <!-- Calendly link widget end -->
-    <style>
-        /* Custom toggle for pricing page */
-        .pricing-toggle-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 48px;
-        }
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: var(--border-glass);
-            transition: .4s;
-            border-radius: 34px;
-            border: 1px solid var(--border-glass);
-        }
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 3px;
-            bottom: 3px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
-        }
-        input:checked + .slider {
-            background-color: var(--accent-indigo);
-        }
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
-        .toggle-label {
-            font-weight: 600;
-            font-size: 16px;
-            color: var(--text-secondary);
-            cursor: pointer;
-        }
-        .toggle-label.active {
-            color: var(--text-primary);
-        }
-        
-        .pricing-pane {
-            display: block;
-        }
-        .pricing-pane.hidden {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans &amp; ROI Calculator | JobQual AI Screening</title>
+  <meta name="description" content="Transparent, variable pricing models for JobQual. Toggle between campaign tiers or pay-as-you-go micro-transactions. Calculate your recruiting ROI.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jobqual.goldenkall.com/pricing.html">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- =========================================================================
+     NAVIGATION
+     ========================================================================= -->
 <nav>
-    <div class="container nav-content">
-        <a href="/" class="nav-logo">
-            <div class="logo-icon">JQ</div>
-            <div class="logo-text">Job<span>Qual</span></div>
-        </a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <div class="nav-links">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/pricing.html" class="nav-link active">Pricing</a>
-            <div class="nav-dropdown">
-                <span class="nav-link dropdown-trigger">Who We Serve</span>
-                <div class="dropdown-content">
-                    <a href="/blog/the-roi-of-automated-phone-screening-for-recruiting-agencies.html">Recruiting Agencies</a>
-                    <a href="/compare/jobqual-vs-hirefirst.html">Corporate Talent Acquisition</a>
-                    <a href="/compare/jobqual-vs-gem.html">High-Growth Startups</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <span class="nav-link dropdown-trigger">Resources</span>
-                <div class="dropdown-content">
-                    <a href="/blog/">Blog & Guides</a>
-                    <a href="/glossary/">Glossary</a>
-                    <a href="/compare/">Compare Tools</a>
-                </div>
-            </div>
-            <a href="https://dash.jobqual.com" class="nav-login">Login</a>
-            <a href="/#pilot-cta" class="nav-cta">Apply for Pilot</a>
+  <div class="container nav-content">
+    <a href="/" class="nav-logo" aria-label="JobQual home">
+      <span class="logo-plate"><img src="/assets/jobqual-logo.png" alt="" aria-hidden="true" class="logo-img"></span>
+      <span class="logo-wordmark">Job<span>Qual</span></span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </label>
+
+    <div class="nav-links" role="navigation" aria-label="Main navigation">
+      <a href="/" class="nav-link">Product</a>
+
+      <div class="nav-dropdown">
+        <span class="nav-link dropdown-trigger" role="button" tabindex="0">How It Works</span>
+        <div class="dropdown-content">
+          <a href="/#how-it-works">Screening Flow</a>
+          <a href="/#features">Platform Capabilities</a>
+          <a href="/#compliance">TCPA &amp; Compliance</a>
+          <a href="/#integrations">ATS Integrations</a>
         </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <span class="nav-link dropdown-trigger" role="button" tabindex="0">Who We Serve</span>
+        <div class="dropdown-content">
+          <a href="/blog/the-roi-of-automated-phone-screening-for-recruiting-agencies.html">Recruiting Agencies</a>
+          <a href="/compare/jobqual-vs-hirefirst.html">Corporate Talent Acquisition</a>
+          <a href="/compare/jobqual-vs-gem.html">High-Growth Startups</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <span class="nav-link dropdown-trigger" role="button" tabindex="0">Resources</span>
+        <div class="dropdown-content">
+          <a href="/blog/">Blog &amp; Guides</a>
+          <a href="/glossary/">Glossary</a>
+          <a href="/compare/">Compare Tools</a>
+        </div>
+      </div>
+
+      <a href="https://dash.jobqual.com" class="nav-login" rel="noopener">Login</a>
+      <!-- CTA points to Setmore/Google/MS Bookings page — swap BOOKING-PLACEHOLDER when live -->
+      <a class="nav-cta btn-primary" href="https://goldenkall.setmore.com/0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr?step=time-slot&amp;products=6ee479b0-2fcf-444d-ae96-17ef5512af6e%7C5759dce2-b79f-469e-a543-d8b3f57ef985&amp;type=service&amp;staff=0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr&amp;staffSelected=false" target="_blank" rel="noopener" data-placeholder="booking">Book a demo</a>
     </div>
+  </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- =========================================================================
+     PAGE HERO
+     ========================================================================= -->
 <header class="page-hero">
-    <div class="container">
-        <div class="section-tag">Flexible Plans</div>
-        <h1>Innovative Vetting, <span class="highlight">Predictable Pricing</span></h1>
-        <p class="lede" style="margin: 16px auto 0 auto;">Choose the model that fits your recruiting volume. From dedicated campaign licenses to usage-based micro-transactions that cover heavy compute margins.</p>
-    </div>
+  <div class="container">
+    <div class="hero-tag">Flexible Plans</div>
+    <h1>Innovative Vetting, <span class="serif-accent" style="font-size: inherit; font-family: var(--font-display); font-style: italic; font-weight: 300; color: var(--gold);">Predictable Pricing</span></h1>
+    <p class="lede" style="margin-top: var(--sp-5);">Choose the model that fits your recruiting volume. From dedicated campaign licenses to usage-based micro-transactions that cover heavy compute margins.</p>
+  </div>
 </header>
 
-<!-- Pricing Selector Toggle -->
+<!-- =========================================================================
+     PRICING TOGGLE + CARDS
+     ========================================================================= -->
 <section class="section" style="padding-top: 0;">
-    <div class="container">
-        
-        <div class="pricing-toggle-container">
-            <span class="toggle-label active" id="label-monthly">Campaign Subscriptions</span>
-            <label class="switch">
-                <input type="checkbox" id="pricing-toggle">
-                <span class="slider"></span>
-            </label>
-            <span class="toggle-label" id="label-usage">Pay-As-You-Go API</span>
-        </div>
+  <div class="container">
 
-        <!-- PANE 1: Subscriptions -->
-        <div class="pricing-pane" id="pane-monthly">
-            <div class="pricing-grid">
-                <!-- Plan 1 -->
-                <div class="glass-panel pricing-card">
-                    <h3 class="plan-name">Starter License</h3>
-                    <div class="plan-price">$399<span>/ month</span></div>
-                    <p style="font-size: 14px; min-height: 48px;">Ideal for early-stage teams with light monthly hiring pipelines.</p>
-                    <ul class="plan-features">
-                        <li>2 Active Job Openings</li>
-                        <li>1,000 Resume Matches / mo</li>
-                        <li>100 Call Screening Minutes</li>
-                        <li>Standard Seniority Ladder</li>
-                        <li>Calendly & iCal Scheduling</li>
-                        <li>Email & CSV Data Exports</li>
-                    </ul>
-                    <a href="/#pilot-cta" class="btn btn-secondary" style="width: 100%; margin-top: 32px;">Apply for Pilot</a>
-                </div>
-                
-                <!-- Plan 2 -->
-                <div class="glass-panel pricing-card featured">
-                    <div class="card-badge">Popular</div>
-                    <h3 class="plan-name">Growth Campaign</h3>
-                    <div class="plan-price">$899<span>/ month</span></div>
-                    <p style="font-size: 14px; min-height: 48px;">Built for scaling companies and specialized staffing agencies.</p>
-                    <ul class="plan-features">
-                        <li>5 Active Job Openings</li>
-                        <li>3,000 Resume Matches / mo</li>
-                        <li>350 Call Screening Minutes</li>
-                        <li>Multi-Agent Rubric Scoring</li>
-                        <li>Greenhouse & ATS Integration</li>
-                        <li>Reconciled Candidate Merge Queue</li>
-                        <li>Priority Outbound Calling Queue</li>
-                    </ul>
-                    <a href="/#pilot-cta" class="btn btn-primary" style="width: 100%; margin-top: 32px;">Apply for Pilot</a>
-                </div>
-                
-                <!-- Plan 3 -->
-                <div class="glass-panel pricing-card">
-                    <h3 class="plan-name">Enterprise Scale</h3>
-                    <div class="plan-price">Custom<span>/ annual</span></div>
-                    <p style="font-size: 14px; min-height: 48px;">For high-volume recruitment agencies and global enterprises.</p>
-                    <ul class="plan-features">
-                        <li>Unlimited Active Job Openings</li>
-                        <li>Custom Resume Match Volumes</li>
-                        <li>Custom Telephony / Minutes</li>
-                        <li>Dedicated Twilio Outbound Number</li>
-                        <li>SLA support & White-labeling</li>
-                        <li>Custom Webhooks & REST API Keys</li>
-                    </ul>
-                    <a href="/#pilot-cta" class="btn btn-secondary" style="width: 100%; margin-top: 32px;">Contact Sales</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- PANE 2: Pay-As-You-Go API -->
-        <div class="pricing-pane hidden" id="pane-usage">
-            <div class="pricing-grid">
-                <!-- Ingestion Credit -->
-                <div class="glass-panel pricing-card">
-                    <h3 class="plan-name">Resume Match Credits</h3>
-                    <div class="plan-price">$0.15<span>/ candidate</span></div>
-                    <p style="font-size: 14px; min-height: 48px;">Pay per resume uploaded and matched against an active playbook.</p>
-                    <ul class="plan-features">
-                        <li>Parsing & Entity Extraction</li>
-                        <li>70% Semantic Whole-Resume Match</li>
-                        <li>25% Section-Best Match Score</li>
-                        <li>5% Haversine Location Bonus</li>
-                        <li>Stability & average tenure checks</li>
-                    </ul>
-                </div>
-                
-                <!-- Vetting Credit -->
-                <div class="glass-panel pricing-card featured">
-                    <h3 class="plan-name">LLM Fitment Gating</h3>
-                    <div class="plan-price">$0.80<span>/ evaluation</span></div>
-                    <p style="font-size: 14px; min-height: 48px;">Evaluate candidate resumes through multi-agent LLM analysis.</p>
-                    <ul class="plan-features">
-                        <li>Check eligibility conditions</li>
-                        <li>Knockout verification rules</li>
-                        <li>Dynamic rubric scorecarding</li>
-                        <li>Check candidate seniority level</li>
-                        <li>API Match Payload creation</li>
-                    </ul>
-                </div>
-                
-                <!-- Telephony Credit -->
-                <div class="glass-panel pricing-card">
-                    <h3 class="plan-name">Voice screening call</h3>
-                    <div class="plan-price">$2.00<span>/ call + $0.40/min</span></div>
-                    <p style="font-size: 14px; min-height: 48px;">Charges for outbound voice connection, transcript generation, and synthesis.</p>
-                    <ul class="plan-features">
-                        <li>Outbound phone call initiation</li>
-                        <li>Timezone-safe TCPA verification</li>
-                        <li>Answering machine detection</li>
-                        <li>Real-time voice dialog engine</li>
-                        <li>Supabase transcription storage</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="glass-panel" style="max-width: 800px; margin: 0 auto; text-align: center; border-color: var(--accent-teal);">
-                <h4>Need outcome-based billing? We offer <strong>Qualified-Candidate Credits ($35/delivered profile)</strong> for staffing agencies. <a href="/#pilot-cta" style="color: var(--accent-teal); font-weight: 600;">Apply to Pilot</a> to learn more.</h4>
-            </div>
-        </div>
-
+    <div class="pricing-toggle-container">
+      <span class="toggle-label active" id="label-monthly">Campaign Subscriptions</span>
+      <label class="switch" aria-label="Toggle pricing mode">
+        <input type="checkbox" id="pricing-toggle">
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-label" id="label-usage">Pay-As-You-Go API</span>
     </div>
+
+    <!-- PANE 1: Subscriptions -->
+    <div class="pricing-pane" id="pane-monthly">
+      <div class="pricing-grid">
+
+        <!-- Starter -->
+        <div class="pricing-card">
+          <div class="plan-name">Starter License</div>
+          <div class="plan-price">$399<span>/ month</span></div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; min-height: 48px;">Ideal for early-stage teams with light monthly hiring pipelines.</p>
+          <ul class="plan-features">
+            <li>2 Active Job Openings</li>
+            <li>1,000 Resume Matches / mo</li>
+            <li>100 Call Screening Minutes</li>
+            <li>Standard Seniority Ladder</li>
+            <li>Calendar &amp; iCal Scheduling</li>
+            <li>Email &amp; CSV Data Exports</li>
+          </ul>
+          <!-- CTA → booking page (Setmore/Google/MS Bookings) -->
+          <a class="btn btn-secondary" href="https://goldenkall.setmore.com/0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr?step=time-slot&amp;products=6ee479b0-2fcf-444d-ae96-17ef5512af6e%7C5759dce2-b79f-469e-a543-d8b3f57ef985&amp;type=service&amp;staff=0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr&amp;staffSelected=false" target="_blank" rel="noopener" data-placeholder="booking" style="width: 100%; margin-top: var(--sp-8); text-align: center;">Apply for Pilot</a>
+        </div>
+
+        <!-- Growth -->
+        <div class="pricing-card featured">
+          <div class="card-badge">Popular</div>
+          <div class="plan-name">Growth Campaign</div>
+          <div class="plan-price">$899<span>/ month</span></div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; min-height: 48px;">Built for scaling companies and specialized staffing agencies.</p>
+          <ul class="plan-features">
+            <li>5 Active Job Openings</li>
+            <li>3,000 Resume Matches / mo</li>
+            <li>350 Call Screening Minutes</li>
+            <li>Multi-Agent Rubric Scoring</li>
+            <li>Greenhouse &amp; ATS Integration</li>
+            <li>Reconciled Candidate Merge Queue</li>
+            <li>Priority Outbound Calling Queue</li>
+          </ul>
+          <!-- CTA → booking page -->
+          <a class="btn btn-primary" href="https://goldenkall.setmore.com/0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr?step=time-slot&amp;products=6ee479b0-2fcf-444d-ae96-17ef5512af6e%7C5759dce2-b79f-469e-a543-d8b3f57ef985&amp;type=service&amp;staff=0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr&amp;staffSelected=false" target="_blank" rel="noopener" data-placeholder="booking" style="width: 100%; margin-top: var(--sp-8); text-align: center;">Apply for Pilot</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card">
+          <div class="plan-name">Enterprise Scale</div>
+          <div class="plan-price">Custom<span>/ annual</span></div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; min-height: 48px;">For high-volume recruitment agencies and global enterprises.</p>
+          <ul class="plan-features">
+            <li>Unlimited Active Job Openings</li>
+            <li>Custom Resume Match Volumes</li>
+            <li>Custom Telephony / Minutes</li>
+            <li>Dedicated Outbound Number</li>
+            <li>SLA support &amp; White-labeling</li>
+            <li>Custom Webhooks &amp; REST API Keys</li>
+          </ul>
+          <!-- CTA → booking page -->
+          <a class="btn btn-secondary" href="https://goldenkall.setmore.com/0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr?step=time-slot&amp;products=6ee479b0-2fcf-444d-ae96-17ef5512af6e%7C5759dce2-b79f-469e-a543-d8b3f57ef985&amp;type=service&amp;staff=0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr&amp;staffSelected=false" target="_blank" rel="noopener" data-placeholder="booking" style="width: 100%; margin-top: var(--sp-8); text-align: center;">Contact Sales</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PANE 2: Pay-As-You-Go API -->
+    <div class="pricing-pane hidden" id="pane-usage">
+      <div class="pricing-grid">
+
+        <!-- Resume Match -->
+        <div class="pricing-card">
+          <div class="plan-name">Resume Match Credits</div>
+          <div class="plan-price">$0.15<span>/ candidate</span></div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; min-height: 48px;">Pay per resume uploaded and matched against an active playbook.</p>
+          <ul class="plan-features">
+            <li>Parsing &amp; Entity Extraction</li>
+            <li>70% Semantic Whole-Resume Match</li>
+            <li>25% Section-Best Match Score</li>
+            <li>5% Haversine Location Bonus</li>
+            <li>Stability &amp; average tenure checks</li>
+          </ul>
+        </div>
+
+        <!-- LLM Fitment -->
+        <div class="pricing-card featured">
+          <div class="plan-name">LLM Fitment Gating</div>
+          <div class="plan-price">$0.80<span>/ evaluation</span></div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; min-height: 48px;">Evaluate candidate resumes through multi-agent LLM analysis.</p>
+          <ul class="plan-features">
+            <li>Check eligibility conditions</li>
+            <li>Knockout verification rules</li>
+            <li>Dynamic rubric scorecarding</li>
+            <li>Check candidate seniority level</li>
+            <li>API Match Payload creation</li>
+          </ul>
+        </div>
+
+        <!-- Voice Screening -->
+        <div class="pricing-card">
+          <div class="plan-name">Voice Screening Call</div>
+          <div class="plan-price">$2.00<span>/ call + $0.40/min</span></div>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; min-height: 48px;">Charges for outbound voice connection, transcript generation, and synthesis.</p>
+          <ul class="plan-features">
+            <li>Outbound phone call initiation</li>
+            <li>Timezone-safe TCPA verification</li>
+            <li>Answering machine detection</li>
+            <li>Real-time voice dialog engine</li>
+            <li>Encrypted transcript storage</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: var(--sp-6); background: var(--surface-2); border: 1px solid var(--border-gold); border-radius: var(--r-md);">
+        <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.7;">Need outcome-based billing? We offer <strong style="color: var(--gold);">Qualified-Candidate Credits ($35 / delivered profile)</strong> for staffing agencies.
+        <!-- CTA → booking page -->
+        <a class="btn btn-sm btn-outline-gold" href="https://goldenkall.setmore.com/0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr?step=time-slot&amp;products=6ee479b0-2fcf-444d-ae96-17ef5512af6e%7C5759dce2-b79f-469e-a543-d8b3f57ef985&amp;type=service&amp;staff=0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr&amp;staffSelected=false" target="_blank" rel="noopener" data-placeholder="booking" style="margin-top: var(--sp-4); display: inline-flex;">Apply to Pilot</a></p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- Interactive ROI Calculator Section -->
-<section class="section alt">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-tag">Calculator</div>
-            <h2>Calculate Your Recruiting Savings</h2>
-            <p class="lede">See how much time and money you save by automating top-funnel candidate screens with JobQual.</p>
-        </div>
-        
-        <div class="glass-panel roi-calculator">
-            <div class="calc-slider-group">
-                <div class="calc-label-group">
-                    <span>Candidates Screened / Month</span>
-                    <span id="calc-val-candidates" style="color: var(--accent-teal); font-weight: 800; font-size: 18px;">200</span>
-                </div>
-                <input type="range" min="50" max="1000" value="200" step="50" class="calc-slider" id="calc-volume">
-            </div>
-            
-            <div class="calc-results-grid">
-                <div class="calc-result-box">
-                    <div class="result-val" id="calc-val-hours">150 hrs</div>
-                    <div style="font-size: 14px; color: var(--text-secondary);">Recruitment Hours Saved / mo</div>
-                </div>
-                <div class="calc-result-box">
-                    <div class="result-val" id="calc-val-savings" style="color: var(--accent-teal);">$9,100</div>
-                    <div style="font-size: 14px; color: var(--text-secondary);">Net Monthly ROI Savings</div>
-                </div>
-            </div>
-            
-            <p style="font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 24px;">Calculations assume an average manual recruiter screen (coordination + call) of 45 minutes at a cost of $48/hr, minus average JobQual execution compute costs.</p>
-        </div>
+<!-- =========================================================================
+     ROI CALCULATOR
+     ========================================================================= -->
+<section class="section section-alt" aria-labelledby="roi-heading">
+  <div class="container">
+    <div class="section-header" style="text-align: center;">
+      <div class="hero-tag" style="margin: 0 auto var(--sp-5);">Calculator</div>
+      <h2 id="roi-heading">Calculate Your Recruiting Savings</h2>
+      <p class="lede" style="margin: var(--sp-4) auto 0;">See how much time and money you save by automating top-funnel candidate screens with JobQual.</p>
     </div>
+
+    <div class="roi-calculator">
+      <div class="calc-slider-group">
+        <div class="calc-label-group">
+          <span>Candidates Screened / Month</span>
+          <span id="calc-val-candidates" class="calc-val">200</span>
+        </div>
+        <input type="range" min="50" max="1000" value="200" step="50" class="calc-slider" id="calc-volume" aria-label="Candidates per month">
+      </div>
+
+      <div class="calc-results-grid">
+        <div class="calc-result-box">
+          <div class="result-val" id="calc-val-hours">150 hrs</div>
+          <div style="font-size: 0.875rem; color: var(--text-secondary); margin-top: var(--sp-2);">Recruitment Hours Saved / mo</div>
+        </div>
+        <div class="calc-result-box">
+          <div class="result-val gold" id="calc-val-savings">$9,100</div>
+          <div style="font-size: 0.875rem; color: var(--text-secondary); margin-top: var(--sp-2);">Net Monthly ROI Savings</div>
+        </div>
+      </div>
+
+      <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: var(--sp-6); line-height: 1.6;">Calculations assume an average manual recruiter screen (coordination + call) of 45 minutes at a cost of $48/hr, minus average JobQual execution compute costs.</p>
+    </div>
+  </div>
 </section>
 
-<!-- Detailed Plan Comparison -->
-<section class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Detailed Capability Matrix</h2>
-            <p class="lede">Review plan details to find the scope of screening that aligns with your operation.</p>
-        </div>
-        
-        <table class="prose-table">
-            <thead>
-                <tr>
-                    <th>Feature</th>
-                    <th>Starter</th>
-                    <th>Growth</th>
-                    <th>Enterprise</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Active Job Openings</td>
-                    <td>2 active JDs</td>
-                    <td>5 active JDs</td>
-                    <td>Unlimited</td>
-                </tr>
-                <tr>
-                    <td>Semantic Matching Score</td>
-                    <td>Whole-resume (70%)</td>
-                    <td>Blended Resume + Location (Haversine)</td>
-                    <td>Full custom signal weights</td>
-                </tr>
-                <tr>
-                    <td>Playbook Verification</td>
-                    <td>Knockouts only</td>
-                    <td>Rubrics + Knocouts + Seniority</td>
-                    <td>Custom LLM prompt agents</td>
-                </tr>
-                <tr>
-                    <td>Scheduling Integrations</td>
-                    <td>Calendly, iCal</td>
-                    <td>Google Calendar, MS Graph</td>
-                    <td>Full Calendar REST API</td>
-                </tr>
-                <li>
-                <tr>
-                    <td>ATS Integration</td>
-                    <td>CSV export only</td>
-                    <td>Greenhouse & Webhooks</td>
-                    <td>Greenhouse, custom ATS sync</td>
-                </tr>
-                <tr>
-                    <td>Calling Regulations</td>
-                    <td>Standard hours</td>
-                    <td>ZIP-code geocoded TCPA checking</td>
-                    <td>Global DNC registry check</td>
-                </tr>
-                <tr>
-                    <td>Candidate Merge Queue</td>
-                    <td>No</td>
-                    <td>Yes</td>
-                    <td>Yes (Multi-tenant)</td>
-                </tr>
-            </tbody>
-        </table>
+<!-- =========================================================================
+     CAPABILITY MATRIX
+     ========================================================================= -->
+<section class="section" aria-labelledby="matrix-heading">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="matrix-heading">Detailed Capability Matrix</h2>
+      <p class="lede">Review plan details to find the scope of screening that aligns with your operation.</p>
     </div>
+
+    <table class="prose-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Starter</th>
+          <th>Growth</th>
+          <th>Enterprise</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Active Job Openings</td>
+          <td>2 active JDs</td>
+          <td>5 active JDs</td>
+          <td>Unlimited</td>
+        </tr>
+        <tr>
+          <td>Semantic Matching Score</td>
+          <td>Whole-resume (70%)</td>
+          <td>Blended Resume + Location (Haversine)</td>
+          <td>Full custom signal weights</td>
+        </tr>
+        <tr>
+          <td>Playbook Verification</td>
+          <td>Knockouts only</td>
+          <td>Rubrics + Knockouts + Seniority</td>
+          <td>Custom LLM prompt agents</td>
+        </tr>
+        <tr>
+          <td>Scheduling Integrations</td>
+          <td>Calendar, iCal</td>
+          <td>Google Calendar, MS Graph</td>
+          <td>Full Calendar REST API</td>
+        </tr>
+        <tr>
+          <td>ATS Integration</td>
+          <td>CSV export only</td>
+          <td>Greenhouse &amp; Webhooks</td>
+          <td>Greenhouse, custom ATS sync</td>
+        </tr>
+        <tr>
+          <td>Calling Regulations</td>
+          <td>Standard hours</td>
+          <td>ZIP-code geocoded TCPA checking</td>
+          <td>Global DNC registry check</td>
+        </tr>
+        <tr>
+          <td>Candidate Merge Queue</td>
+          <td>No</td>
+          <td>Yes</td>
+          <td>Yes (Multi-tenant)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
-<!-- Footer -->
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-logo-area">
-                <a href="/" class="nav-logo">
-                    <div class="logo-icon">JQ</div>
-                    <div class="logo-text" style="color: var(--text-primary);">Job<span>Qual</span></div>
-                </a>
-                <p class="footer-desc">Next-generation outbound AI voice screening and candidate matching software. Automating the top of your recruiting funnel safely.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Platform</h4>
-                <ul>
-                    <li><a href="/pricing.html">Pricing Plans</a></li>
-                    <li><a href="/compare/jobqual-vs-hirefirst.html">VS HireFirst</a></li>
-                    <li><a href="/compare/jobqual-vs-paradox.html">VS Paradox</a></li>
-                    <li><a href="/compare/jobqual-vs-gem.html">VS Gem</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="/blog/">Recruitment Blog</a></li>
-                    <li><a href="/glossary/">Glossary of Terms</a></li>
-                    <li><a href="/compare/">All Tool Comparisons</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/terms.html">Terms of Service</a></li>
-                    <li><a href="mailto:info@jobqual.ai">Contact Support</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 JobQual Technologies, Inc. All rights reserved.</p>
-            <div class="footer-bottom-links">
-                <a href="/privacy.html">Privacy Policy</a>
-                <a href="/terms.html">Terms of Service</a>
-            </div>
-        </div>
+<!-- =========================================================================
+     CTA
+     ========================================================================= -->
+<section class="section section-alt" aria-labelledby="pricing-cta-heading">
+  <div class="container">
+    <div class="cta-block reveal">
+      <h2 id="pricing-cta-heading">Ready to cut screening overhead?</h2>
+      <p class="lede">We're onboarding a limited cohort of early partners. Book a 30-minute demo to see a live screening run on your actual job description.</p>
+      <div class="cta-actions">
+        <!-- CTA → booking page (Setmore/Google/MS Bookings) -->
+        <a class="btn btn-primary" href="https://goldenkall.setmore.com/0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr?step=time-slot&amp;products=6ee479b0-2fcf-444d-ae96-17ef5512af6e%7C5759dce2-b79f-469e-a543-d8b3f57ef985&amp;type=service&amp;staff=0YuCQah6zeVJgodzB4D7GRhqLPfy3jzr&amp;staffSelected=false" target="_blank" rel="noopener" data-placeholder="booking">Book a demo</a>
+        <a class="btn btn-secondary" href="mailto:info@jobqual.goldenkall.com">Apply for early access</a>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     FOOTER
+     ========================================================================= -->
+<footer class="site-footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-gk"><span aria-hidden="true">◆</span> GoldenKall</div>
+        <p class="footer-desc">Agentic AI, built for voice. JobQual automates the top of your recruiting funnel — compliantly and at scale.</p>
+        <div class="footer-family-note">Also from GoldenKall: <a href="https://voco.goldenkall.com" target="_blank" rel="noopener">Voco</a> — AI restaurant phone ordering</div>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="/#features">Capabilities</a></li>
+          <li><a href="/#how-it-works">How It Works</a></li>
+          <li><a href="/#compliance">TCPA Compliance</a></li>
+          <li><a href="/#integrations">Integrations</a></li>
+          <li><a href="https://dash.jobqual.com" rel="noopener">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/blog/">Blog &amp; Guides</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="/compare/">Compare Tools</a></li>
+          <li><a href="/compare/jobqual-vs-paradox.html">vs Paradox</a></li>
+          <li><a href="/compare/jobqual-vs-hirevue.html">vs HireVue</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://goldenkall.com" target="_blank" rel="noopener">GoldenKall</a></li>
+          <li><a href="https://voco.goldenkall.com" target="_blank" rel="noopener">Voco</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+          <li><a href="mailto:info@jobqual.goldenkall.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© GoldenKall LLC. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="https://goldenkall.com" target="_blank" rel="noopener">GoldenKall</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script>
-    // Pricing page custom toggle script
-    const pricingToggle = document.getElementById('pricing-toggle');
-    const paneMonthly = document.getElementById('pane-monthly');
-    const paneUsage = document.getElementById('pane-usage');
-    const labelMonthly = document.getElementById('label-monthly');
-    const labelUsage = document.getElementById('label-usage');
+  // Pricing toggle
+  const pricingToggle = document.getElementById('pricing-toggle');
+  const paneMonthly  = document.getElementById('pane-monthly');
+  const paneUsage    = document.getElementById('pane-usage');
+  const labelMonthly = document.getElementById('label-monthly');
+  const labelUsage   = document.getElementById('label-usage');
 
-    pricingToggle.addEventListener('change', () => {
-        if (pricingToggle.checked) {
-            paneMonthly.classList.add('hidden');
-            paneUsage.classList.remove('hidden');
-            labelMonthly.classList.remove('active');
-            labelUsage.classList.add('active');
-        } else {
-            paneMonthly.classList.remove('hidden');
-            paneUsage.classList.add('hidden');
-            labelMonthly.classList.add('active');
-            labelUsage.classList.remove('active');
-        }
-    });
+  pricingToggle.addEventListener('change', () => {
+    const usageMode = pricingToggle.checked;
+    paneMonthly.classList.toggle('hidden', usageMode);
+    paneUsage.classList.toggle('hidden', !usageMode);
+    labelMonthly.classList.toggle('active', !usageMode);
+    labelUsage.classList.toggle('active', usageMode);
+  });
+
+  // ROI Calculator
+  const volSlider    = document.getElementById('calc-volume');
+  const valCandidates = document.getElementById('calc-val-candidates');
+  const valHours     = document.getElementById('calc-val-hours');
+  const valSavings   = document.getElementById('calc-val-savings');
+
+  function updateROI() {
+    const n = parseInt(volSlider.value, 10);
+    const manualHrs = (n * 45) / 60;
+    const manualCost = manualHrs * 48;
+    const jqCost = 899; // Growth plan as baseline
+    const savings = Math.max(0, manualCost - jqCost);
+    const hoursRecaptured = Math.round(manualHrs * 0.82); // ~82% automation rate
+
+    valCandidates.textContent = n.toLocaleString();
+    valHours.textContent = hoursRecaptured + ' hrs';
+    valSavings.textContent = '$' + Math.round(savings).toLocaleString();
+  }
+
+  volSlider.addEventListener('input', updateROI);
+  updateROI();
 </script>
 <script src="/assets/site.js"></script>
 </body>

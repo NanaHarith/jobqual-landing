@@ -1,0 +1,32 @@
+# JobQual
+
+> TCPA-compliant AI voice agent for recruiting. Outbound screening, resume matching, and ATS sync.
+
+JobQual is an autonomous AI voice agent built for recruiting. It places outbound screening calls, runs custom playbooks, scores candidates in real-time against your rubric, matches resumes to job descriptions via semantic embeddings, and books qualified candidates directly on recruiter calendars — all TCPA-compliant and fully ATS-integrated. Part of GoldenKall LLC.
+
+## Features & Capabilities
+
+- [Home](https://jobqual.goldenkall.com): Product overview, live screening simulator, value proposition.
+- [How It Works](https://jobqual.goldenkall.com/#how-it-works): Resume → Playbook → Screen → Score → Schedule workflow.
+- [Platform Capabilities](https://jobqual.goldenkall.com/#features): Outbound & inbound calling, custom screening playbooks, scorecard & knockout gating, semantic resume matching, bulk upload & vendor links, scheduling & reminders, ATS sync (Greenhouse/webhook), warm-transfer handoff.
+- [TCPA & Compliance](https://jobqual.goldenkall.com/#compliance): DNC list checks, calling-window enforcement, candidate timezone resolution, consent records, disclosure scripting, audit-ready logs.
+- [ATS Integrations](https://jobqual.goldenkall.com/#integrations): Native Greenhouse connector, generic HMAC webhook, CSV export, ICS calendar invites, SMS & email notifications.
+- [Who We Serve](https://jobqual.goldenkall.com/#serve-heading): Recruiting agencies, corporate talent acquisition, high-growth startups.
+- [Pricing](https://jobqual.goldenkall.com/pricing.html): Usage-metered model; contact sales.
+- [Compare Tools](https://jobqual.goldenkall.com/compare/): Comparisons vs HireFirst, Paradox, Gem, HireVue.
+- [Blog & Guides](https://jobqual.goldenkall.com/blog/): Articles on phone screening ROI, outbound vs inbound vetting.
+- [Glossary](https://jobqual.goldenkall.com/glossary/): Terms like outbound call screening.
+- [FAQ](https://jobqual.goldenkall.com/#faq): Outbound flow, TCPA compliance, resume matching, ATS integrations, vendor submissions, scheduling.
+- [Privacy Policy](https://jobqual.goldenkall.com/privacy.html): Data practices.
+- [Terms of Service](https://jobqual.goldenkall.com/terms.html): Legal terms.
+
+## About
+
+JobQual removes the recruiting bottleneck. Qualified candidates are called within hours, not days. Every screen produces a structured scorecard with fitment score, knockout verdicts, and recruiter-readable summary. Full call transcripts and recordings sync to your ATS automatically. Part of GoldenKall LLC — an agentic AI company.
+
+## App & Support
+
+- App login: https://dash.jobqual.com
+- Company: info@jobqual.goldenkall.com
+- Parent: [GoldenKall — Agentic AI Company](https://goldenkall.com)
+- Sibling product: [Voco — AI Restaurant Phone Ordering](https://voco.goldenkall.com)
